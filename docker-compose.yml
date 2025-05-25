@@ -9,9 +9,9 @@ services:
       - "80:80" # Map host port 80 to container port 80
     depends_on:
       - backend # Ensure backend starts before frontend (for proxying)
-    volumes:
-      # Optional: Mount frontend files for live development if needed
-      # - ./frontend:/usr/share/nginx/html
+    # Optional: Mount frontend files for live development if needed
+    # volumes:
+    #   - ./frontend:/usr/share/nginx/html
     networks:
       - emptycup_network # Assign to a custom network
 
@@ -21,9 +21,9 @@ services:
       dockerfile: Dockerfile.backend # Use the backend Dockerfile
     ports:
       - "5000:5000" # Map host port 5000 to container port 5000 (though frontend proxies to it)
-    volumes:
-      # Optional: Mount backend files for live development (e.g., if you change app.py)
-      # - ./backend:/app
+    # Optional: Mount backend files for live development (e.g., if you change app.py)
+    volumes: # This 'volumes' key must be followed by a list
+      - ./backend:/app # Each item in the list starts with a hyphen and a space
     networks:
       - emptycup_network # Assign to the same custom network
 
