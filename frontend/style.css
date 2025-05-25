@@ -1,0 +1,100 @@
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fcfcfc; 
+}
+/* Custom styles for the logo placeholder (mimicking the Figma logo) */
+.logo-svg {
+    width: 32px;
+    height: 32px;
+    /* Using a simple SVG for the logo to mimic the abstract shape */
+}
+/* Custom styling for the filter buttons to mimic the Figma design */
+.filter-btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    color: #6b7280; /* text-gray-500 */
+    transition: color 0.2s ease-in-out;
+    font-size: 0.8em; /* text-sm */
+    font-weight: 500; /* Medium weight */
+}
+.filter-btn-group.active {
+    color: #ff6347; /* A warm orange/red for active state, similar to Figma */
+}
+.filter-btn-group i {
+    font-size: 1.5em; /* Icon size */
+    margin-bottom: 4px;
+}
+/* Custom styling for the designer card */
+.designer-card {
+    background-color: #fcf8f3; /* Light beige/cream background for the card */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Softer shadow */
+    overflow: hidden;
+    display: flex;
+    padding: 16px; /* Adjusted padding */
+}
+/* Styling for the main content area of the card */
+.card-content-area {
+    flex: 1;
+    padding-right: 16px; /* Space between content and actions */
+}
+/* Custom styling for the vertical action buttons on the right */
+.card-actions-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Distribute space evenly */
+    padding-left: 1rem; /* Space between content and actions */
+    border-left: 1px solid #f0e9e0; /* Lighter border for separation */
+    min-width: 80px; /* Ensure enough space for icons and text */
+}
+.card-action-btn {
+    @apply flex flex-col items-center text-xs font-medium text-gray-600 py-1.5 px-2 rounded-lg hover:bg-gray-100 transition-colors duration-200;
+    color: #7a7a7a; /* Slightly darker gray for action text */
+}
+.card-action-btn i {
+    font-size: 1.1em;
+    margin-bottom: 2px;
+    color: #9a9a9a; /* Lighter gray for action icons */
+}
+.card-action-btn.shortlist-btn.active {
+    color: #dc2626; /* red-600 for active heart text */
+}
+.card-action-btn.shortlist-btn.active i {
+    color: #dc2626; /* red-600 for active heart icon */
+}
+/* Hide/Show details for dynamic content */
+.designer-details-expanded {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.designer-details-expanded.show {
+    max-height: 200px; /* Adjust as needed for content */
+    transition: max-height 0.5s ease-in;
+}
+/* Star rating styling */
+.star-rating .fa-star,
+.star-rating .fa-star-half-alt {
+    color: #ffc107; /* Gold color for stars */
+}
+.star-rating .far.fa-star {
+    color: #e0e0e0; /* Light grey for empty stars */
+}
+/* Stats badges */
+.stats-badge {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background-color: #f0f0f0; /* Neutral background for badges */
+    color: #555; /* Darker text for badges */
+}
+.stats-badge.price {
+    background-color: transparent; /* Price badge has no background */
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger for price */
+    color: #333;
+}

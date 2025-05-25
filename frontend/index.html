@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmptyCup - Interior Designers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm p-4 flex items-center justify-between sticky top-0 z-10">
+        <div class="flex items-center space-x-3">
+            <img src="/assets/logo-small 1.png" alt="">
+            <h1 class="text-xl font-semibold text-gray-800">EmptyCup</h1>
+        </div>
+        <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+            <i class="fas fa-ellipsis-v text-lg"></i>
+        </button>
+    </header>
+
+    <nav class="bg-white shadow-sm py-2 flex justify-around border-b border-gray-200">
+        <button class="filter-btn-group active" data-filter="contacts">
+            <i class="fas fa-list-alt"></i>
+            <span>Contacts</span>
+        </button>
+        <button class="filter-btn-group" data-filter="gallery">
+            <i class="fas fa-image"></i>
+            <span>Gallery</span>
+        </button>
+        <button class="filter-btn-group" data-filter="map">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Map</span>
+        </button>
+        <button class="filter-btn-group" id="shortlisted-filter-btn" data-filter="shortlisted">
+            <i class="far fa-heart"></i> <span>Shortlisted</span>
+        </button>
+        <button class="filter-btn-group" data-filter="sort">
+            <i class="fas fa-sort-amount-down"></i>
+            <span>Sort</span>
+        </button>
+    </nav>
+
+    <main class="flex-1 overflow-y-auto">
+        <div id="designer-listings" class="space-y-4">
+            </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
